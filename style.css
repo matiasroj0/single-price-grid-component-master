@@ -1,0 +1,194 @@
+:root {
+    /* primary */
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-cyan:hsl(179, 47%, 52%);
+    /* neutral */
+    --light-gray: hsl(200, 24%, 90%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+/* css reset */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*  */
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--light-gray);
+}
+
+main {
+    padding: 4rem;
+}
+
+/* grid setup */
+
+.card {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "join-div join-div"
+      "price-div why-us-div";
+  }
+  
+.join-div { grid-area: join-div; }
+  
+.price-div { grid-area: price-div; }
+
+.why-us-div { grid-area: why-us-div; }
+
+/* ---------- */
+
+.card > * {
+    padding: 1.2rem 2rem;
+}
+
+.join-div {
+    background-color: white;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.price-div {
+    background-color: var(--cyan);
+    border-bottom-left-radius: .5rem;
+}
+
+.why-us-div {
+    background-color: var(--light-cyan);
+    border-bottom-right-radius: .5rem;
+    padding: 2.5rem;
+}
+
+.join-div h2 {
+    color: var(--light-cyan);
+    font-size: 1.8rem;
+    padding-bottom: .8rem;
+}
+
+.join-div h3 {
+    color: var(--bright-yellow);
+    padding-bottom: .5rem;
+    font-size: 1.2rem;
+}
+
+.join-div p {
+    color: var(--grayish-blue);
+    font-size: 1.02rem;
+}
+
+.price-div {
+    color: white;
+    padding: 2.5rem;
+}
+
+.price-div h2 {
+    font-size: 1.2rem;
+    padding-bottom: .5rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.price-div h3 {
+    font-size: 2rem;
+}
+
+.price-div .price h4 {
+    color: hsl(183, 56%, 63%);
+}
+
+.price-div p {
+    padding-bottom: 1.5rem;
+    color: var(--light-gray);
+    font-size: .96rem;
+}
+
+.price-div button {
+    width: 100%;
+    padding: .8rem;
+    border: 0;
+    border-radius: .4rem;
+    background-color: var(--bright-yellow);
+    color: white;
+    cursor: pointer;
+}
+
+.price-div button:hover {
+    background-color: hsl(71, 52%, 52%)
+}
+
+.why-us-div h3 {
+    color: white;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+.why-us-div h5 {
+    color: #a5eff3;
+    font-size: .85rem;
+}
+
+@media (max-width: 600px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+    }
+
+    .join-div {
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+    
+    .price-div {
+        border-bottom-left-radius: initial;
+    }
+    
+    .why-us-div {
+        border-bottom-right-radius: initial;
+    }
+
+    main {
+        padding: 0;
+    }
+}
