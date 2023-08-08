@@ -173,6 +173,10 @@ main {
 }
 
 @media (max-width: 600px) {
+    main {
+        padding: 0;
+    }
+
     .card {
         display: flex;
         flex-direction: column;
@@ -192,7 +196,41 @@ main {
         border-bottom-right-radius: initial;
     }
 
-    main {
-        padding: 0;
+    .join-div h2 {
+        padding-bottom: 1.4rem;
+    }
+    
+    .join-div h3 {
+        padding-bottom: .9rem;
+    }
+
+    .join-div p {
+        font-size: 1.07rem;
+    }
+
+    .price-div h2 {
+        padding-bottom: .8rem;
+    }
+    
+    .price-div h3 {
+        font-size: 2.1rem;
+    }
+    
+    .price-div p {
+        padding-bottom: 2rem;
+        font-size: .96rem;
+    }
+    
+    .price-div button {
+        padding: .9rem;
+    }
+
+    .why-us-div h3 {
+        font-size: 1.3rem;
+        padding-bottom: 1.2rem;
+    }
+    
+    .why-us-div h5 {
+        font-size: .85rem;
     }
 }
