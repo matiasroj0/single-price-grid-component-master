@@ -233,4 +233,8 @@ main {
     .why-us-div h5 {
         font-size: .85rem;
     }
+
+    .why-us-div {
+        padding-bottom: 3rem;
+    }
 }
